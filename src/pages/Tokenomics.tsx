@@ -140,9 +140,15 @@ const TokenomicsPage = () => {
                   No insider trading, no pre-sales - pure community-driven growth!
                 </p>
                 <div className="pt-4">
-                  <PixelButton variant="primary" size="lg">
-                    🎯 Trade on Pump Fun
-                  </PixelButton>
+                  <a 
+                    href="https://pump.fun/coin/6G3Akh5zgSyTPFZGoTKwnvN8VonYggBVwXgk7AmKpump" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <PixelButton variant="primary" size="lg">
+                      🎯 Trade on Pump Fun
+                    </PixelButton>
+                  </a>
                 </div>
               </div>
             </PixelCard>
