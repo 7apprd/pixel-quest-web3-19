@@ -49,17 +49,13 @@ export const GameStats = () => {
     isPositive: true,
     isLoading: tokenData.isLoading
   }];
-  
-  return (
-    <section className="py-16 px-4">
+  return <section className="py-16 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold pixel-font text-primary-glow mb-4">
             📊 GAME STATISTICS 📊
           </h2>
-          <p className="text-xl text-muted-foreground pixel-font">
-            Live development progress and community metrics
-          </p>
+          <p className="text-xl text-muted-foreground pixel-font">Development progress and community metrics</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -96,6 +92,5 @@ export const GameStats = () => {
           </PixelCard>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
