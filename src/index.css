@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 8-bit Game Design System - Pixel Perfect Colors & Animations
+All colors MUST be HSL for perfect 8-bit aesthetics.
+*/
+
+@layer base {
+  :root {
+    /* 8-bit Pixel Background */
+    --background: 120 20% 8%;
+    --foreground: 120 80% 95%;
+
+    /* Game UI Cards */
+    --card: 120 15% 12%;
+    --card-foreground: 120 70% 90%;
+
+    /* Popover Windows */
+    --popover: 120 25% 10%;
+    --popover-foreground: 120 80% 95%;
+
+    /* Primary Game Green (GreenCap inspired) */
+    --primary: 120 80% 45%;
+    --primary-foreground: 120 10% 5%;
+    --primary-glow: 120 90% 55%;
+
+    /* Secondary Pixel Blue */
+    --secondary: 200 70% 35%;
+    --secondary-foreground: 200 90% 95%;
+
+    /* Muted Game UI */
+    --muted: 120 20% 15%;
+    --muted-foreground: 120 30% 60%;
+
+    /* Accent Pixel Orange */
+    --accent: 30 90% 55%;
+    --accent-foreground: 30 10% 5%;
+
+    /* Destructive Red Pixel */
+    --destructive: 0 80% 55%;
+    --destructive-foreground: 0 10% 95%;
+
+    /* Pixel Borders */
+    --border: 120 30% 25%;
+    --input: 120 25% 20%;
+    --ring: 120 80% 45%;
+
+    /* Pixel Perfect Radius */
+    --radius: 0px;
+
+    /* Game Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-game: linear-gradient(180deg, hsl(var(--background)), hsl(120 25% 15%));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(120 20% 18%));
+
+    /* Pixel Shadows */
+    --shadow-pixel: 4px 4px 0px hsl(var(--primary) / 0.3);
+    --shadow-glow: 0 0 20px hsl(var(--primary-glow) / 0.6);
+
+    /* 8-bit Animations */
+    --transition-pixel: all 0.1s steps(3);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Sidebar (Game Menu) */
+    --sidebar-background: 120 25% 10%;
+    --sidebar-foreground: 120 70% 85%;
+    --sidebar-primary: 120 80% 45%;
+    --sidebar-primary-foreground: 120 10% 5%;
+    --sidebar-accent: 120 30% 20%;
+    --sidebar-accent-foreground: 120 70% 85%;
+    --sidebar-border: 120 40% 30%;
+    --sidebar-ring: 120 80% 45%;
+  }
+
+  /* Dark mode maintains 8-bit aesthetic */
+  .dark {
+    --background: 120 15% 5%;
+    --foreground: 120 80% 95%;
+
+    --card: 120 20% 8%;
+    --card-foreground: 120 70% 90%;
+
+    --popover: 120 25% 7%;
+    --popover-foreground: 120 80% 95%;
+
+    --primary: 120 85% 50%;
+    --primary-foreground: 120 10% 5%;
+    --primary-glow: 120 95% 60%;
+
+    --secondary: 200 75% 40%;
+    --secondary-foreground: 200 90% 95%;
+
+    --muted: 120 25% 12%;
+    --muted-foreground: 120 40% 70%;
+
+    --accent: 30 95% 60%;
+    --accent-foreground: 30 10% 5%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 10% 95%;
+
+    --border: 120 35% 20%;
+    --input: 120 30% 15%;
+    --ring: 120 85% 50%;
+    
+    --sidebar-background: 120 20% 7%;
+    --sidebar-foreground: 120 70% 85%;
+    --sidebar-primary: 120 85% 50%;
+    --sidebar-primary-foreground: 120 10% 5%;
+    --sidebar-accent: 120 35% 15%;
+    --sidebar-accent-foreground: 120 70% 85%;
+    --sidebar-border: 120 45% 25%;
+    --sidebar-ring: 120 85% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono;
+    background-image: 
+      radial-gradient(hsl(var(--primary) / 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    image-rendering: pixelated;
+  }
+
+  /* Pixel Perfect Typography */
+  .pixel-font {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    text-rendering: optimizeSpeed;
+    image-rendering: pixelated;
+  }
+
+  /* 8-bit Button Effects */
+  .pixel-button {
+    @apply bg-primary text-primary-foreground border-2 border-primary-glow;
+    box-shadow: var(--shadow-pixel);
+    transition: var(--transition-pixel);
+    image-rendering: pixelated;
+  }
+
+  .pixel-button:hover {
+    @apply bg-primary-glow;
+    box-shadow: var(--shadow-glow);
+    transform: translate(-2px, -2px);
+  }
+
+  /* Floating Animation */
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .float-delayed {
+    animation: float 3s ease-in-out infinite 1.5s;
+  }
+
+  /* Pixel Pulse */
+  .pixel-pulse {
+    animation: pixelPulse 2s steps(4) infinite;
+  }
+
+  /* Growing Plant Animation */
+  .grow {
+    animation: grow 4s ease-in-out infinite;
+  }
+}
+
+/* 8-bit Keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pixelPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes grow {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Pixelated Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary-glow));
+}
