@@ -75,27 +75,19 @@ export const QuickLinks = () => {
       }
     }
   };
-  
-  return (
-    <section className="py-16 px-4 bg-background/50">
+  return <section className="py-16 px-4 bg-background/50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold pixel-font text-primary-glow mb-4">
-            🔗 QUICK ACCESS 🔗
-          </h2>
+          
           <p className="text-xl text-muted-foreground pixel-font">
             Explore the Hero Bit 4K universe
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {quickLinks.map((category, index) => (
-            <PixelCard 
-              key={category.category} 
-              animated 
-              className="animate-fade-in"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
+          {quickLinks.map((category, index) => <PixelCard key={category.category} animated className="animate-fade-in" style={{
+          animationDelay: `${index * 0.2}s`
+        }}>
               <div className="flex items-center gap-3 mb-6">
                 <div className="text-primary-glow">{category.icon}</div>
                 <h3 className="text-xl font-bold pixel-font text-primary-glow">
@@ -104,25 +96,17 @@ export const QuickLinks = () => {
               </div>
               
               <div className="space-y-3">
-                {category.links.map((link) => (
-                  <button
-                    key={link.title}
-                    onClick={() => handleLinkClick(link.url)}
-                    className="w-full flex items-center gap-3 p-3 rounded border border-border hover:bg-accent/10 hover:border-accent transition-all duration-200 group"
-                  >
+                {category.links.map(link => <button key={link.title} onClick={() => handleLinkClick(link.url)} className="w-full flex items-center gap-3 p-3 rounded border border-border hover:bg-accent/10 hover:border-accent transition-all duration-200 group">
                     <div className="text-accent group-hover:text-primary-glow transition-colors">
                       {link.icon}
                     </div>
                     <span className="text-foreground group-hover:text-primary-glow transition-colors pixel-font">
                       {link.title}
                     </span>
-                  </button>
-                ))}
+                  </button>)}
               </div>
-            </PixelCard>
-          ))}
+            </PixelCard>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
