@@ -49,7 +49,7 @@ export const GameHero = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '1.5s' }}>
               <PixelButton size="lg" onClick={() => window.open('/whitepaper', '_blank')}>
-                📖 GAME MANUAL
+                📖 GAME
               </PixelButton>
               <PixelButton variant="accent" size="lg" onClick={() => window.open('/tokenomics', '_blank')}>
                 💰 TOKENOMICS
