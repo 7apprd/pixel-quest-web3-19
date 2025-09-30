@@ -58,19 +58,11 @@ export const GameStats = () => {
           <p className="text-xl text-muted-foreground pixel-font">Development progress and community metrics</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <PixelCard animated className="text-center">
-            <img src={coinIcon} alt="Coins" className="w-12 h-12 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold pixel-font text-primary-glow mb-2">
-              1,234,567
-            </h3>
-            <p className="text-muted-foreground pixel-font">Total Coins Collected</p>
-          </PixelCard>
-          
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <PixelCard animated className="text-center">
             <div className="text-4xl mb-4">🏆</div>
             <h3 className="text-2xl font-bold pixel-font text-primary-glow mb-2">
-              8,921
+              12
             </h3>
             <p className="text-muted-foreground pixel-font">Heroes Created</p>
           </PixelCard>
