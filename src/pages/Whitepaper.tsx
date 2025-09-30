@@ -24,10 +24,10 @@ const WhitepaperPage = () => {
     {
       title: "🚀 Development Roadmap",
       content: [
-        "Q1 2026: Alpha Launch with 3 worlds",
-        "Q2 2026: Multiplayer Expansion & Guild System",
-        "Q3 2026: Competitive Mode & Tournaments",
-        "Q4 2026: Virtual Reality & Epic Expansions"
+        "Q1 - January: Alpha Launch with 3 worlds",
+        "Q2 - April: Multiplayer Expansion & Guild System",
+        "Q3 - July: Competitive Mode & Tournaments",
+        "Q4 - October: Virtual Reality & Epic Expansions"
       ]
     },
     {
@@ -112,7 +112,7 @@ const WhitepaperPage = () => {
                   🔥 IN DEVELOPMENT 🔥
                 </h2>
                 <p className="text-muted-foreground">
-                  The game is being developed and will launch in 2026
+                  The game is being developed and will launch in Q4 - December
                 </p>
                 <p className="text-sm text-muted-foreground">
                   Follow our progress and stay updated with the latest news!
